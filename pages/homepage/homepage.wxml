@@ -1,0 +1,98 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}px'></view>
+
+
+
+
+
+    <!-- 遮罩层 -->
+<view class="mask" catchtouchmove="preventTouchMove" bindtap="hideModal"  wx:if="{{showModal}}"></view>
+
+<view class="slider">
+  
+  <swiper indicator-dots="true" autoplay="true" >
+
+    <block wx:for="{{Shufflings}}">
+        <swiper-item class="banner-item" >
+          <image src="{{url}}{{item.img}}"  mode="widthFix"></image>
+        </swiper-item>
+    </block>
+ 
+
+
+  </swiper>
+
+</view>
+
+
+<view style="clear:both"></view>
+
+
+<view class="daohang">
+    <view class="ig" id="qx" bindtap="openmap">
+      <image src="../../images/home/home_icon_1.png" class="activity_image"></image>
+      <view>慧出行</view>
+    </view>
+    <view class="ig" id="jt" data-id='4' catchtap='freeTell' data-current="4" bindtap="chooseImg">
+        <image src="../../images/home/home_icon_2.png" class="activity_image"></image>
+        <view>慧维修</view>
+    </view>
+    <view class="ig" id="zhuye" bindtap="goproduct">
+        <image src="../../images/home/home_icon_3.png" class="activity_image"></image>
+        <view>慧保养</view>
+    </view>
+    <view class="ig" id="ny" data-id='4' catchtap='freeTell' data-current="4" bindtap="chooseImg">
+        <image src="../../images/home/home_icon_4.png" class="activity_image"></image>
+        <view>慧救援</view>
+    </view>
+<view style="clear:both"></view>
+</view>
+
+
+
+
+
+
+<view class="binding personal_list_activity">
+    <view class="knowledge_bg" >
+      <view class="new_activity home-title">最新知识  <span class="knowledge_bg_more" bindtap="more_knowledge">查询更多</span></view>
+        <block wx:for="{{News}}" wx:if="{{index<2}}">
+          <view class="knowledge" data-id="{{item.id}}" bindtap="knowledge_info">
+            <view class="knowledge_img"><image src="{{url}}{{item.img}}" mode="widthFix"></image></view>
+            <view class="knowledge_con">{{item.name}}</view>
+          </view>
+        </block>
+    <view style="clear:both"></view>
+</view> 
+
+</view> 
+
+
+
+
+<view class="personal_list_activity">
+  <view class="new_activity home-title">近期活动</view>
+  <view class="activity_image" bindtap="activity"><image src="{{url}}{{Activity}}" mode="widthFix"></image></view>
+</view> 
+
+
+
+
+
+
+
+<view class="abut">
+  <view class="new_activity home-title">门店信息</view>
+
+  <view class="new_activity home-con" >营业时间 :<span>9:00-18:00</span></view>
+  <view class="new_activity home-con" >门店地址 :<span>成都市武侯区金花镇金航路69号</span></view>
+
+</view> 
+
+
+  <view class='footer_list2 tel' bindtap="myIndex"  wx:if="{{user.number>0}}">
+    <view class="tel-con"><image class="footer-image2" src="../../images/home/telephone.png"></image></view>
+  </view>
+
+
+

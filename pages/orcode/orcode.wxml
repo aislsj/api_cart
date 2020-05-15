@@ -1,0 +1,33 @@
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+  
+  <view class="codeall cardrollheight" >
+    <view class="ordle_title title-top" >感恩有您携手同行</view>
+    <view class="code-image">
+        <view class="cardtitle" wx:if="{{getWay == 3}}">我的礼品</view>
+        <view class="cardtitle" wx:if="{{getWay != 3}}">奖品卷</view>
+        <view class="cardname">{{group_array.name}}</view>
+        <view class="cardcon" wx:if="{{getWay == 3}}">管理员扫码，领取精美大礼</view>
+        <!-- <view class="cardcon" wx:if="{{getWay != 3}}">送给朋友，朋友领取后。你将会获的3次抽奖机会</view> -->
+        <view class='cardimage'><image src="{{orCodeImage}}" binderror='getQrCode'></image></view>
+    </view>
+    <view>
+    
+       <view wx:if="{{getWay != 3}}">
+          <view class="modal-dialog" wx:if="{{sendnum == 0}}">
+            <button  class="send-friend" type="button"  class="for_friends" bindtap="sendnonum" style="background:#f43237;border:none;position:none;color:white">发送给朋友</button>
+          </view>
+       </view> 
+        <view wx:if="{{getWay != 3}}">
+        <view class="modal-dialog" wx:if="{{sendnum > 0}}" >
+            <button  class="send-friend" type="primary" open-type="share" data-name="pageShare" id="{{group_cart_id}}" class="for_friends" style="background:#f43237;border:none;position:none">
+            <view class="wexin" hidden="{{getWay==3}}" ><image src="../../images/orcode/weixin.png"></image></view>
+            发送给朋友
+            </button>
+          </view>
+        </view>
+    </view>
+  </view>

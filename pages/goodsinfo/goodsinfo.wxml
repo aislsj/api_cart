@@ -1,0 +1,88 @@
+<wxs src="../../utils/filter.wxs" module="filters"/>
+
+
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+
+
+<view class="all cardrollheight"  style="padding-top:{{navH}}rpx">
+
+  <view class="exchange_info title-top">
+      <view class="title">
+        产品介绍
+      </view>
+  </view>
+  
+  <view class="product_image">
+      <view class="integralInfo_img" >
+        <image src="{{url}}{{cardInfo.cardImg}}" mode="widthFix"></image>
+      </view>
+
+
+      <view class="volume_info">
+        <view class="volume_explain">使用说明</view>
+        <view class="volume_con">
+          <text>
+            {{cardInfo.memo}}
+          </text>
+        </view>
+      </view>
+  </view>
+
+
+
+
+
+   <view style="height:100rpx"></view>
+<view class="detail-bottom-box">
+    <view class=" bottom-text buy" data-redeem="{{cardInfo.redeem}}"   data-id="{{cardInfo.lotteryId}}" bindtap="btn">立即兑换</view>
+    <view class="bottom-text addcart">合计:<span>{{cardInfo.redeem}}积分</span></view>
+</view>
+
+
+</view>
+
+
+
+
+<!--index.wxml-->
+<!-- 遮罩层 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<!-- 弹出层 -->
+
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <view class="modelAll">
+        <view class="cloe" bindtap="ok"><image src="../../images/integral/x.png"></image></view>
+        <view class="model-title">兑换方式</view>
+        <view class="model-label"><span>{{redeem}}积分</span></view>
+        <view class="model-sum">
+          <view class="sum-tit">数量</view>
+          <view class="sum">
+            <picker  range="{{countsArray}}" name="size" bindchange="bindPickerChange" value="1">
+                <view class="counts-icon" style="float:left;">{{productCount}}</view>
+                <view><image class = "counts-icon counts-icon-image" src="../../images/integral/bottom.png" ></image></view>
+                <view class="clear"></view>
+            </picker>
+          </view>
+          <input hidden="true" name="lotteryId" value="{{goodsid}}"></input>
+        </view>
+        <button class="ok" formType="submit">兑换</button>
+    </view>
+  </view>
+</form>
+
+
+<view class="modal-mask" bindtap="hideModal"  wx:if="{{successModal}}"></view>
+<view class="modal-dialog" wx:if="{{successModal}}">
+  <view  bindtap="tocardroll" style="text-align:center">
+    <image class='view-image-1' src="../../images/integral/success.png" ></image>
+  </view>
+</view>
+
+

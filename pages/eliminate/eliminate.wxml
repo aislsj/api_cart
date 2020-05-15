@@ -1,0 +1,19 @@
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+
+<view class="all cardrollheight" style="padding-top:{{navH}}rpx">
+  <view  class="title-top">
+    <view class="image"><image src="{{url}}{{card_roll.img}}"></image></view>
+    <view class="image_title">{{card_roll.name}}</view>
+    <view class="choice">
+        <view class="cancel" bindtap="goBack">取消</view>
+        <view class="confirm" data-lottery="{{lottery}}"  data-carid="{{carId}}" bindtap="ok" >确认消卷</view>
+    </view>
+  </view>
+ 
+</view>
+

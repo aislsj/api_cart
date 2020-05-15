@@ -1,0 +1,210 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wxab830ccdf6f5e9bd",
+	"projectname": "%E5%A4%A7%E8%BD%AC%E7%9B%98",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/integral/integral",
+					"pathName": "pages/integral/integral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/volume/volume",
+					"pathName": "pages/volume/volume",
+					"query": "id=492",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cardroll/cardroll",
+					"pathName": "pages/cardroll/cardroll",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods/goods",
+					"pathName": "pages/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/cartinfo/cartinfo",
+					"pathName": "pages/cartinfo/cartinfo",
+					"query": "id=46",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cart/addcart",
+					"pathName": "pages/cart/addcart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/news",
+					"pathName": "pages/news/news",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/upload_image/uploadImage",
+					"pathName": "pages/upload_image/uploadImage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "pages/orcode/orcode",
+					"pathName": "pages/orcode/orcode",
+					"query": "lotteryHistoryId=590&carId=33",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "pages/receive/receive",
+					"pathName": "pages/receive/receive",
+					"query": "id=495",
+					"scene": null
+				},
+				{
+					"id": 17,
+					"name": "pages/eliminate/eliminate",
+					"pathName": "pages/eliminate/eliminate",
+					"query": "carId=3&lotteryHistoryId=74",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "pages/goodsinfo/goodsinfo",
+					"pathName": "pages/goodsinfo/goodsinfo",
+					"query": "id=19",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goodsroll/goodsroll",
+					"pathName": "pages/goodsroll/goodsroll",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 21,
+					"name": "pages/volumegoods/volumegoods",
+					"pathName": "pages/volumegoods/volumegoods",
+					"query": "id=495",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activity/activity",
+					"pathName": "pages/activity/activity",
+					"query": "id=19",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/homepage/homepage",
+					"pathName": "pages/homepage/homepage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/knowledge/knowledge",
+					"pathName": "pages/knowledge/knowledge",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "pages/knowledgeinfo/knowledgeinfo",
+					"pathName": "pages/knowledgeinfo/knowledgeinfo",
+					"query": "id=33",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,21 @@
+/* pages/knowledge/knowledge.wxss */
+
+page{background: white}
+
+.all{margin-top: 30rpx;width: 90%;margin:0 auto}
+
+.knowledge_list{border-bottom: 1px solid #efecec;padding:32rpx 0}
+.knowledge_list .image{width: 40%}
+.knowledge_list .text{width: 55%;padding-left: 5%}
+.knowledge_list .image image{width: 100%}
+.knowledge_list .image ,.knowledge_list .text{float: left}
+
+
+.text .title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight: 600;font-size: 35rpx }
+
+.text .con{font-size: 28rpx;display: -webkit-box;word-break: break-all;text-overflow: ellipsis;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp:3;text-indent:2em;color:#969494;line-height:40rpx;height: 120rpx}
+
+.text-botton span{font: 24rpx;}
+.text-botton{color:#969494;margin-top: 15rpx}
+.text-left{float: left}
+.text-right{float: right}

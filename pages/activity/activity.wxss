@@ -1,0 +1,107 @@
+page{background: white}
+
+.exchange_info{width: 90%;margin: 0 auto}
+.exchange_info .title{font-size: 31rpx;font-family: 400;margin: 20rpx 0;}
+
+.integralInfo_img{width: 100%}
+.integralInfo_img image{width: 100%}
+
+
+
+
+
+
+.detail-bottom-box{position: fixed;bottom: 0;width: 100%;background: rgb(244,244,244)}
+.detail-bottom-box view image{width: 30rpx;height: 30rpx}
+
+.detail-bottom-box .bottom-text{width:35%;}
+.addcart span{color: red}
+.buy{color:#fff;background: red}  
+.detail-bottom-box view{  display: block;  float: right;  padding: 7pt 0;    text-align: center;  font-size: 12pt;  }
+
+
+
+
+
+
+
+
+
+.cloe{width:50rpx;height: 50rpx;float: right;}
+.cloe image{width: 100%;height: 100%}
+.model-title{margin-top: 5%;font-size: 24rpx}
+ .model-label span{background:#FDD7D8;border: 1rpx  solid #F33133;border-radius:10px;padding: 5rpx 40rpx;color: #FC0000;font-size: 30rpx}
+.model-title,.model-sum{color: #AAAAAA}
+.model-label{margin-top: 5%}
+.model-sum{margin-top: 7%;height: 25px;font-size: 24rpx}
+.sum-tit{float: left}
+.sum{float: left;height: 25px;width: 80%;margin-left: 16px;line-height: 25px}
+.sum-tit{height: 25px;line-height: 25px;}
+.counts-icon{height: 30rpx;width: 40rpx}
+.counts-icon-image{height: 48rpx;width: 40rpx}
+
+/* 遮罩层 */
+.mask{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:#000;
+    z-index:9000;
+    opacity:0.5;
+}
+  
+/* 弹出层 */
+.modelAll{
+  padding: 5%
+}
+
+.modalDlg{
+    width:100%;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    margin:0 auto;
+    background-color:#fff;
+    flex-direction: column;
+}
+
+/* 弹出层里面的按钮 */
+.ok{
+  width:80%;
+  height:40px;
+  background:#F9383B;
+  line-height:35px;
+  text-align:center;
+  color:#fff;
+  font-size:15px;
+  margin:20px auto;
+  border-radius:100px;
+}
+ 
+/* 弹出层里面的文字 */
+.text{
+  text-align:justify;
+  font-size:14px;
+  color:#666;
+  width:180px;
+  margin-top:10px;
+}
+
+
+/* 兑换成功后弹出图片 */
+.modal-mask {width: 100%; height: 100%; position: fixed; top: 0;left: 0;background: #000;opacity: 0.5;}
+.modal-dialog {overflow: hidden;position: fixed; top: 15%; width: 100%; z-index: 99999}
+
+.tocardroll{width: 100%;text-align: center}
+.view-image-1{width: 483rpx;height: 528rpx;}
+
+.view-image-text{width: 600rpx;height: 150rpx;text-align: center;padding-top: 5%}
+.for_friends{background: linear-gradient(#FF2A4D, #FF7092); 
+margin-right: 10%}
+.show{background: linear-gradient(#FDAA03, #FEEF55);}
+.for_friends,.show{line-height: 50px;padding: 3% 8%;border-radius: 50px;color: white;font-size: 18px}
+

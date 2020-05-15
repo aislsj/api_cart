@@ -1,0 +1,44 @@
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+  
+
+<view class="all" style="padding-top:{{navH}}rpx">
+  <view class="con_title title-top" >
+    <view class="summary">
+        <view class="all_num" wx:if="{{mynumber}}"><image src="../../images/integral/integral.png"></image> 剩余积分<span>{{number.integral}}</span></view>
+        <view class="time" wx:if="{{updatetime}}"><image src="../../images/integral/time.png"></image> {{updatetime}} 更新</view>
+        <view class="clear"></view>
+    </view>
+  </view>
+
+
+<view class="con_info">
+
+  <block wx:for="{{hislist}}">
+    <view class="integralInfo">
+        <view class="integralInfo_img"><image src="../../images/icon/prize.png"></image></view>
+        <view class="integralInfo_txt">
+          <view>{{item.lotteryConfig.name}}  <span  wx:if="{{index  == 0}}">NEW</span></view>
+          <view class="con">{{item.lotteryConfig.instructions}}</view>
+          <view wx:if="{{item.state == 0}}" class="state">兑换成功，积分{{item.integral}}</view>
+          <view wx:if="{{item.state == 1}}" class="state">使用成功，积分+{{item.integral}}</view>
+        </view>
+        <view class="integralInfoadd">
+          <view wx:if="{{item.state == 0}}" class="integralInfo_img"><image src="../../images/integral/stat1.png"></image></view>
+          <view wx:if="{{item.state == 1}}" class="integralInfo_img"><image src="../../images/integral/stat2.png"></image></view>
+        </view>
+        <view class="clear"></view>
+      </view>
+  </block>
+
+
+  <view class="separate" wx:if="{{hislist_num}}">
+      你还未有使用过积分的记录！使用优惠卷可以获得积分，使用积分可以兑换商品！
+  </view>
+
+</view>
+
+
+</view>

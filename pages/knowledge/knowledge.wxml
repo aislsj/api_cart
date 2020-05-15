@@ -1,0 +1,25 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+<view class="all" style='padding-top: {{height}}px'>
+
+ <block wx:for="{{News}}">
+    <view class="knowledge_list" data-id="{{item.id}}" bindtap="knowledge_info">
+      <view class="image">
+        <image src="{{url}}{{item.img}}" mode="widthFix"></image>
+      </view>
+      <view class="text">
+        <view class="title">{{item.name}}</view>
+        <view class="con">{{item.content}}</view>
+      </view>
+      <view style="clear:both"></view>
+    </view>
+  </block>
+
+
+    
+
+
+
+</view>

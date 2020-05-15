@@ -1,0 +1,15 @@
+/* pages/orcode/orcode.wxss */
+
+.codeall{text-align: center}
+.ordle_title {font-size:55rpx;color: white;margin-top: 30rpx}
+.code-image{width: 80%;background: white;margin: 5% auto;padding: 5% 0}
+.code-image .cardname{font-size: 32rpx;color: #D63E3D;margin: 10px 0; }
+.code-image .cardcon{font-size:25rpx;color: #999999 ;margin-bottom: 30px}
+.cardimage{width: 180px;height: 180px;margin: 0 auto}
+.cardimage image{width: 100%;height: 100%}
+.save-image{background:#D63E3D;font-size:28rpx;color: white;border-radius: 15px;width: 150px;margin: 20px auto;padding: 15rpx 0 }
+.center{text-align: center;}
+.wexin image{width: 50px;height: 50px;margin-top: 10px;}
+.send-friend{font-size: 14px;text-align: center;color: white}
+
+button::after{border:none}

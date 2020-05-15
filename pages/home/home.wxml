@@ -1,0 +1,126 @@
+
+
+
+
+<view class="allw" style="width:100%;min-height:100%;background-image:url('https://www.jxdqx.com/file/1586742080467.o6zAJs1AYvnAJjOmpOqDkCmUadFY');background-size:100% 100%; ">
+
+
+
+
+<view style="width:100%;height:{{navH}}px"></view>
+<view class="titleMaxw"></view>
+
+
+
+<view class="user" wx:if="{{register}}">
+  <view class="userinfo-avatar">
+      <image src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="userinfo-nickname">
+  <view class="u-name">{{userInfo.nickName}}</view>
+  </view>
+</view>
+
+
+<view class="user"  wx:if="{{unregistered}}">
+  <view class="userinfo-avatar">
+      <image src="../../images/home/notlogin.png"></image>
+  </view>
+  <view class="userinfo-nickname">
+  <view class="u-name homelogin" bindtap="login" >登录/注册</view>
+  </view>
+</view>
+
+
+
+
+
+<view class="card_roll">
+  <view class="my_card">我的卡卷<span bindtap="card_roll">查看</span></view>
+  <view class="stats">
+      <view class="satas_1" bindtap="card_roll">未使用<span>{{ybm[0].count}}</span></view>
+      <view class="satas_2" bindtap="card_roll1">已使用<span>{{ybm[1].count}}</span></view>
+      <view class="satas_3" bindtap="card_roll2">已过期<span>{{ybm[2].count}}</span></view>
+      <view class="clear"></view>
+  </view>
+</view>
+
+
+<view class="personal_list">
+  <view class="list"  bindtap="goNew">
+    <view class="list_1"><image src="../../images/home/home_1.png" ></image></view>
+    <view class="list_2" >
+      <view class="list2con">
+        <view class="tiele">我的消息</view>
+        <view class="con" wx:if="{{Message == true}}">你有未读消息，请点击查看！</view>
+      </view>
+    </view>
+    <view class="list_3">
+      <image src="../../images/home/left.png" ></image>
+    </view>
+     <view  class='remind' wx:if="{{Message == true}}"></view> 
+    <view class="clear"></view>
+  </view>
+</view>
+
+
+
+<view class="personal_list"  wx:if="{{user.permissions == 1}}">
+  <view class="list"  bindtap='getScancode'>
+    <view class="list_1"><image src="../../images/home/home_3.png" ></image></view>
+    <view class="list_2" >
+      <view class="list2con">
+        <view class="tiele">管理员扫码</view>
+      </view>
+    </view>
+    <view class="list_3">
+      <image src="../../images/home/left.png" ></image>
+    </view>
+     <view  class='remind' wx:if="{{Message == true}}"></view> 
+    <view class="clear"></view>
+  </view>
+</view>
+
+
+
+<view class="personal_list" >
+  <view class="list"  bindtap="myIndex">
+    <view class="list_1"><image src="../../images/home/home_2.png" ></image></view>
+      <view class="list_2" >
+        <view class="list2con">
+          <view class="tiele">卡卷抽奖</view>
+          <view class="con"  wx:if="{{user.number>0}}">你有未使用的抽奖次数，请点击抽奖！</view>
+        </view>
+      </view>
+    <view class="list_3">
+      <image src="../../images/home/left.png" ></image>
+    </view>
+     <view  class='remind' wx:if="{{user.number>0}}"></view> 
+    <view class="clear"></view>
+  </view>
+</view>
+
+
+
+
+<view class="personal_list_icon">
+  <view class="card_roll_icon">
+    <view class="stats">
+        <view class="satas_1_icon" bindtap="goCart"><image src="../../images/home/icon_1.png"></image><span>我的车辆</span></view>
+        <view class="satas_2_icon" bindtap="myIntegral"><image src="../../images/home/icon_2.png"></image><span>我的积分</span></view>
+        <view class="satas_3_icon" bindtap="goShopping"><image src="../../images/home/icon_3.png"></image><span>积分商城</span></view>
+        <view class="satas_4_icon" bindtap="myexchange"><image src="../../images/home/icon_4.png"></image><span>我的兑换</span></view>
+        <view class="clear"></view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+</view> 
+

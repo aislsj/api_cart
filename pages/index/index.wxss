@@ -1,0 +1,183 @@
+.all {
+    display: flex;
+    width: 750rpx;
+    height: 1330rpx;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.titleMax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleMax text {
+    margin-top: 60rpx;
+    font-size: 40rpx;
+    color: #fff;
+    font-weight: 300;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titles p {
+    margin-top: 10rpx;
+    font-size: 72rpx;
+    color: #fff;
+    font-weight: 600;
+}
+
+.titleFont {
+    display: flex;
+    width: 385rpx;
+    height: 50rpx;
+    margin: 0 auto;
+    margin-top: 50rpx;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background: pink; */
+    background: linear-gradient(#fde1c2, #ffda98);
+    border: 2rpx solid white;
+    border-radius: 100rpx;
+}
+
+.titleFont p {
+    line-height: 20rpx;
+    font-size: 29rpx;
+    color: #f34538;
+}
+
+.luckyBox {
+    display: flex;
+    width: 600rpx;
+    height: 730rpx;
+    margin-top: 55rpx;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.luckyBox p {
+    margin-top: 30rpx;
+    font-size: 35rpx;
+    color: #fff;
+    font-weight: 500;
+}
+
+.luckyBox span {
+    color: #fbda23;
+    margin-left: 8rpx;
+    margin-right: 8rpx;
+}
+
+.home {
+    display: flex;
+    width: 240rpx;
+    height: 52rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    /* background: pink; */
+    background: linear-gradient(#fde1c2, #ffda98);
+    border: 2rpx solid white;
+    border-radius: 100rpx;
+}
+
+.home p {
+    line-height: 47rpx;
+    font-size: 29rpx;
+    color: #f34538;
+    font-weight: 300;
+}
+
+.giftBox {
+    position: absolute;
+    width: 242rpx;
+    height: 220rpx;
+    z-index: 4;
+    right: 3%;
+    top: 1035rpx;
+}
+
+
+/* 分割线 */
+
+
+/**index.wxss**/
+
+.frame_view {
+    bottom: 160rpx;
+    left: 60rpx;
+    right: 60rpx;
+    width: 450rpx;
+    height: 450rpx;
+    padding: 20rpx;
+    /* background: #792db3; */
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30rpx;
+}
+
+.frame_row {
+    width: 480rpx;
+    height: 160rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frame_item {
+    width: 145rpx;
+    height: 145rpx;
+}
+
+.page-body-info {
+    padding-bottom: 0;
+    height: 230px;
+}
+
+.userinfo-avatar {
+    border-radius: 128rpx;
+    width: 128rpx;
+    height: 128rpx;
+}
+
+.userinfo-nickname {
+    margin-top: 20rpx;
+    font-size: 38rpx;
+}
+
+
+/* 弹窗层-图片*/
+.modal-mask {width: 100%; height: 100%; position: fixed; top: 0;left: 0;background: #000;opacity: 0.5;}
+.modal-dialog {overflow: hidden;position: fixed; top:15%; width: 100%; z-index: 99999;display: flex;
+  align-items: center;justify-content: center;}
+
+.modal-dialog image{display: block}
+.view-image-1{width: 600rpx;height: 310rpx;}
+.view-image-2{width: 600rpx;height: 100rpx}
+.view-image-3{width: 600rpx;height: 275rpx;text-align: center;line-height: 275rpx;color: red;font-size:48rpx  /*30px*/} 
+
+.view-image-text{width: 600rpx;height: 150rpx;text-align: center;display:flex;align-items:center;justify-content:center;}
+.for_friends{background: linear-gradient(#FF2A4D, #FF7092);margin-right: 5%}
+.show{background: linear-gradient(#FDAA03, #FEEF55);}
+.for_friends,.show{line-height: 60rpx;width: 35%;height:60rpx;border-radius: 50px;color: #7f091c;margin: 0;font-size: 30rpx }
+

@@ -1,0 +1,15 @@
+/* pages/eliminate/eliminate.wxss */
+page{background: white}
+.titleMax{background: #f43237}
+.all{width: 80%;margin: 0 auto;}
+.image{width:80%;margin: 5% auto 0 auto}
+.image image{width: 100%}
+.image_title{text-align: center;margin: 5% auto;font-size: 16px}
+
+
+
+.choice{text-align: center}
+.cancel{background: linear-gradient(#FF2A4D, #FF7092); margin-right: 7%}
+.confirm{background: linear-gradient(#FDAA03, #FEEF55);}
+.cancel,.confirm{line-height:35px;width: 120px;height:35px;float: left;border-radius: 50px;color: white;font-size: 14px}
+.cancel{float: left;margin-left: 10%}

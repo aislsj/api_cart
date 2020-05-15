@@ -1,0 +1,44 @@
+<wxs src="../../utils/filter.wxs" module="filters"/>
+
+
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+
+<view class="all" style="padding-top:{{navH}}rpx">
+
+  <view class="con_info title-top">
+
+      <view class="integralInfo_img">
+            <image src="{{url}}{{cardInfo.lotteryConfig.cardImg}}"  mode="widthFix"  style="width:100%" ></image>
+      </view>
+
+
+      <view class="volume_tit exchange_info">
+          <view class="integralInfo"></view>
+
+          <view class="volume_info">
+            <view class="volume_explain">使用说明</view>
+            <view class="volume_con">
+              <text>
+                {{cardInfo.lotteryConfig.memo}}
+              </text>
+            </view>
+          </view>
+      </view>
+
+      <view style="height:100rpx"></view>
+
+      <view class="detail-bottom-box" wx:if="{{cardInfo.state==0}}">
+          <view class=" bottom-text buy"  bindtap="orCode">立即使用</view>
+      </view>
+
+  </view>
+
+</view>
+
+
+

@@ -1,0 +1,178 @@
+
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+
+
+
+<view class="all cardrollheight" style="padding-top:{{navH}}rpx">
+ 
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <view class="addcartinfo title-top">
+        <view  class="line">
+            <span>保险人</span>
+            <input type="text" placeholder="请输入保险人" name="name" value="{{name}}" placeholder-style='font-size: 22rpx;color:#CDCCCC;'></input>
+            <view class="clear"></view>
+        </view>
+        <view  class="line">
+            <span>车牌号码</span>
+            <input type="text" placeholder="请输入车牌号" name="carNumber" value="{{carNumber}}" placeholder-style='font-size: 22rpx;color:#CDCCCC;'></input>
+            <view class="clear"></view>
+        </view>
+        <view  class="line">
+            <span>手机号码</span>
+            <input type="text" placeholder="请输入保险人手机号码" name="phone" value="{{phone}}" placeholder-style='font-size: 22rpx;color:#CDCCCC;'></input>
+            <view class="clear"></view>
+        </view>
+        <view  class="line">
+
+        <view class='regPhonef' >
+          <view class="row-wrap">
+              <picker bindchange="bindcarChange" range="{{group_array}}" value='{{group_array[group_index].insuranceId}}' range-key="{{'name'}}" >
+              <span>交强险</span>
+              <input hidden="true" name='insuranceBrand' value='{{teamid}}' /> 
+              <input class='selectInp' placeholder-class='{{place}}' placeholder='请选择保险公司'  disabled='false' value='{{teamname}}' placeholder-style='font-size: 22rpx;color:#CDCCCC;' /> 
+              </picker>
+          </view>
+        </view>
+            <view class="clear"></view>
+        </view>
+        <view  class="line">
+            <span>到期时间</span>
+            <picker mode="date" name="insuranceTime" value="{{timedate1}}" start="1978-01-01" end="2030-1-23" bindchange="bindCrossDateChange">  
+                <view class="picker">  
+                  {{Crossdates}}  
+                </view>  
+            </picker>  
+            <view class="clear"></view>
+        </view>
+
+
+        <!-- 表单提交方式 1添加 2修改 -->
+        <input hidden="true" name="fromtype" value="{{formtype}}"></input>
+        <view  class="line">
+            <view class='regPhonef' >
+              <view class="row-wrap">
+                  <picker bindchange="bindbusinessPickerChange" range="{{group_array}}" value='{{group_array[group_index].insuranceId}}' range-key="{{'name'}}" >
+                  <span>商业险</span>
+                  <input hidden="true" name="businessBrand" value='{{teamid2}}' /> 
+                  <input class='selectInp' placeholder-class='{{place}}' placeholder='请选择保险公司'  disabled='false' value='{{teamname2}}' placeholder-style='font-size: 22rpx;color:#CDCCCC;'/> 
+                  </picker>
+              </view>
+            </view>
+            <view class="clear"></view>
+        </view>
+        <view  class="line">
+            <span>到期时间</span>
+            <picker mode="date" value="{{timedate2}}" name="businessTime" start="1978-01-01" end="2030-1-23" bindchange="bindbusinessDateChange">  
+                <view class="picker" >  
+                  {{businessdates}}  
+                </view>  
+            </picker>  
+            <view class="clear"></view>
+        </view>
+    
+
+        <view  class="line_span">
+            <span>上传行驶证</span>
+        </view>
+        <view class="driving_license">
+            <view class="image_left">
+              <view class="driving_image" wx:for="{{travel_first}}">
+                <image src="{{item}}"  data-type="travel_first" bindtap="chooseImg"></image>
+              </view>
+              <input hidden="true" name="travel_first_image" value="{{travel_first_image}}"></input>
+              <view class="driving_text" data-type="travel_first" bindtap="chooseImg" type='primary'>上传<span>行驶证</span>正页</view>
+            </view>
+
+
+
+            <view class="image_right">
+              <view class="driving_image" wx:for="{{travel_last}}">
+              <image src="{{item}}"  data-type="travel_last" bindtap="chooseImg"></image>
+              </view>
+              <input hidden="true" name="travel_last_image" value="{{travel_last_image}}"></input>
+              <view class="driving_text" data-type="travel_last" bindtap="chooseImg" type='primary'>上传<span>行驶证</span>反页</view>
+            </view>
+
+            <view class="clear"></view>
+        </view>
+
+
+
+        <view  class="line_span">
+            <span>被保险人身份证</span>
+        </view>
+        <view class="driving_license">
+
+
+
+
+          <view class="image_left">
+              <view class="driving_image" wx:for="{{insurance_first}}">
+                <image src="{{item}}" data-type="insurance_first" bindtap="chooseImg"></image>
+              </view>
+              <input hidden="true" name="insurance_first_image" value="{{insurance_first_image}}"></input>
+                <view class="driving_text" data-type="insurance_first" bindtap="chooseImg" type='primary'>上传<span>被保险人</span>身份证正面</view>
+              
+            </view>
+
+
+            <view class="image_right">
+              <view class="driving_image" wx:for="{{insurance_last}}">
+                <image src="{{item}}" data-type="insurance_last" bindtap="chooseImg"></image>
+              </view>
+              <input hidden="true" name="insurance_last_image" value="{{insurance_last_image}}"></input>
+              <view class="driving_text" data-type="insurance_last" bindtap="chooseImg" type='primary'>上传<span>被保险人</span>身份证反面</view>
+            </view>
+
+
+            <view class="clear"></view>
+        </view>
+        <view style="text-align:center;font-size:20rpx;margin-top:3%">车辆是公司户，但被保险人为个人时，必须上传身份证</view>
+
+
+      <view wx:if="{{carId}}">
+          <input hidden="true" placeholder="汽车编号" name="carId" value="{{carId}}"></input>
+      </view>
+
+      <input hidden="true" name="enterprise_first_image" value="{{enterprise_first_image}}"></input>
+      <view wx:if="{{cart_type==2}}">
+          <view  class="line_span">
+            <span>上传营业执照</span>
+        </view>
+        <view class="driving_license">
+            <view class="image_left">
+              <view class="license" wx:for="{{enterprise_first}}">
+                <image src="{{item}}"  data-type="enterprise_first" bindtap="chooseImg"></image>
+              </view>
+              
+              <view class="driving_text" data-type="enterprise_first" bindtap="chooseImg" type='primary'>上传营业执照</view>
+            </view>
+            <view class="clear"></view>
+        </view>
+      </view>
+
+      <!-- 车辆类型 -->
+      <input hidden="true" name="type" value="{{cart_type}}"></input>
+      <view class="clear"></view>
+
+
+      <view class="save">
+        <button  formType="submit">保存</button>
+      </view>
+
+
+
+    </view>
+
+  </form>
+
+
+ 
+</view>
+

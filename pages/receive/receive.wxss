@@ -1,0 +1,32 @@
+/* pages/eliminate/eliminate.wxss */
+.titleMax{background: #f43237}
+.all{width: 80%;margin: 0 auto;}
+.image{width:80%;margin: 5% auto 0 auto}
+.image image{width: 100%}
+.image_title{text-align: center;margin: 5% auto;font-size: 16px}
+
+
+
+.choice{text-align: center}
+.cancel{background: linear-gradient(#FF2A4D, #FF7092); margin-right: 7%}
+.confirm{background: linear-gradient(#FDAA03, #FEEF55);margin-left: 2.5%}
+.cancel,.confirm{line-height:35px;width:42%;height:35px;float: left;border-radius: 50px;color: white;font-size: 14px}
+.cancel{float: left;margin-left: 5%;margin-right: 2.5%}
+
+
+
+/* pages/orcode/orcode.wxss */
+
+.codeall{text-align: center}
+.ordle_title {font-size:55rpx;color: white;}
+.code-image{width: 80%;background: white;margin: 5% auto;padding: 5% 0}
+.code-image .cardname{font-size: 15px;color: #D63E3D;margin: 10px 0; }
+.code-image .cardcon{font-size: 12px;color: #999999 ;margin: 25px 0}
+.cardimage{width: 180px;height: 180px;margin: 0 auto}
+.cardimage image{width: 100%;height: 100%}
+.save-image{background:#D63E3D;font-size: 12px;color: white;border-radius: 15px;width: 150px;margin: 20px auto; }
+.center{text-align: center;}
+.wexin image{width: 50px;height: 50px;margin-top: 10px;}
+.send-friend{font-size: 14px;text-align: center;color: white}
+
+button::after{border:none}

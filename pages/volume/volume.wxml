@@ -1,0 +1,129 @@
+<wxs src="../../utils/filter.wxs" module="filters"/>
+
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+<view class="all" style="padding-top:{{navH}}rpx">
+
+<view class="con_info title-top">
+
+
+<view class="volume_tit exchange_info">
+
+    <view class="integralInfo">
+
+      <view wx:if="{{cardInfo.state==0}}">
+        <view class="integralInfo_img"   bindtap="orCode">
+          <image src="../../images/exchange/ceshi.png"></image>
+          <view class="finger_img" >
+            <image src="../../images/vomule/finger.png" style="width:25px;height:25px"></image>
+          </view>
+        </view>
+      </view>
+      
+      <view wx:if="{{cardInfo.state!=0}}">
+        <view class="integralInfo_img">
+          <image src="../../images/exchange/ceshi.png"></image>
+        </view>
+      </view>
+
+
+      <view class="integralInfo_txt">
+        <view>{{cardInfo.lotteryConfig.name}}</view>
+        <view  wx:if="{{cardInfo.lotteryConfig.overdue==true}}">
+        {{filters.formatDate(cardInfo.overdueTime)}}过期
+        </view>
+        <view  wx:if="{{cardInfo.lotteryConfig.overdue==flase}}">
+          永不过期
+        </view>
+
+
+        <view  wx:if="{{cardInfo.state==0}}">
+          可使用
+        </view>
+        <view  wx:if="{{cardInfo.state==1}}">
+          已使用
+        </view>
+        <view  wx:if="{{cardInfo.state==2}}">
+          已过期
+        </view>
+        <view  wx:if="{{cardInfo.state==3}}">
+          已赠与
+        </view>
+      </view>
+       <view class="clear"></view>
+    </view>
+
+
+    <view class="volume_info">
+      <view class="volume_explain">使用说明</view>
+      <view class="volume_con">
+        <text>
+          <!-- 1、本优惠卷仅限于小程序内使用。
+          2、领取该优惠卷为汽车一个面油漆现金抵用卷 
+          3、此卷不找零，不提现。
+          4、一个面只限使用一张 -->
+          {{cardInfo.lotteryConfig.memo}}
+        </text>
+      </view>
+    </view>
+
+
+    <view class="start_time">
+      <view class="start_title">有效期开始时间</view>
+      <view>{{startTime}}</view>
+    </view>
+
+
+    <view class="end_time">
+      <view class="end_title">有效期结束时间</view>
+      <view>{{endTime}}</view>
+    </view>
+
+
+</view>
+
+
+
+<view class="volume_info">
+
+
+
+
+
+
+</view>
+
+
+
+
+
+</view>
+
+
+</view>
+
+
+
+
+
+
+  
+<!-- 遮罩层 车辆选择 -->
+<view class="mask" catchtouchmove="preventTouchMove" bindtap="hideModal"  wx:if="{{showModal}}"></view>
+<!-- 弹出层 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+<!-- 二维码或其他图片 -->
+    <image src="{{orCodeImage}}" />
+    <picker bindchange="bindcarChange" range="{{group_array}}" value='{{group_array[group_index].insuranceId}}' range-key="{{'carNumber'}}" >
+    <input hidden="true" name="businessBrand" value='{{teamid}}' /> 
+    <input class='selectInp text' placeholder-class='{{place}}' placeholder='请选择车辆'  disabled='false' value='{{teamname}}'/> 
+    </picker>
+    <!-- <text class="text">请选择车辆</text> -->
+    <view>
+      <view bindtap="personal" data-lot="{{lotteryHistoryId}}" data-car="{{carId}}"  class="ok">确定</view>
+    </view>
+</view>

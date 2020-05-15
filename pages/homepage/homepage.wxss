@@ -1,0 +1,139 @@
+/* pages/homepage/homepage.wxss */
+page{background: white}
+
+.slider{width: 100%}
+.slider image{width: 100%}
+
+
+.personal_list_activity{position: relative;  width: 100%;background: white; overflow: auto;  z-index: 10000;}
+.personal_list_activity .activity_image{margin: 0 auto}
+.personal_list_activity .new_activity{width: 95%;margin: 20rpx auto;}
+
+
+/* .activity_image{width: 140rpx;height: 200rpx;} */
+
+
+
+.daohang{margin-bottom:20rpx }
+.ig {display: table;float: left;width:25%;text-align: center;font-size: 30rpx}
+
+.ig image {width: 100rpx;height: 100rpx}
+
+
+.activity_image image{width: 100%}
+
+.home-title{font-size: 36rpx;font-weight: 700}
+.home-con{font-size: 28rpx; }
+.home-con span{color: #eb5858;margin-left: 15rpx}
+.abut{position: relative;  width: 100%;background: white; overflow: auto;  z-index: 10000;padding-bottom: 40rpx}
+.abut .activity_image{width: 100%;margin: 0 auto}
+.abut .new_activity{width: 95%;}
+.abut image{width: 40rpx;height: 40rpx;display: block;float:left}
+.footer-image2{width:55rpx;height: 55rpx}
+.footer_list2{width: 80rpx;height:80rpx;background:rgb(39,200,177);border-radius: 20px;}
+.tel-con{width: 80rpx;height: 80rpx;display: table-cell;
+vertical-align: middle;
+text-align: center;}
+.home-title{margin: 20rpx auto 40rpx auto;}
+.home-con{margin: 20rpx auto;}
+.tel{position: fixed;bottom:15rpx;right:10rpx;display:inline;z-index: 99999}
+
+.binding{width: 100%; padding: 20rpx 0;background: #f1eded}
+.binding-tit{font-size: 32rpx;font-weight: 600}
+.binding-con{font-size: 26rpx;font-weight: 400;margin:32rpx 0}
+.binding-con span{ border: 1px solid #eb5858;padding: 9rpx;color: #eb5858;font-size: 24rpx}
+.binding-cart{background: white;padding: 20rpx;width: 100%;margin: 0 auto;}
+
+
+
+.knowledge{width: 48%;float: left;}
+.knowledge_img image{width: 100%}
+.personal_list_activity .knowledge{margin:0 1%}
+.knowledge_con{font-size:30rpx }
+
+.knowledge_bg{background: white;padding: 20rpx 0;}
+.knowledge_bg_more{float: right;color: #848181;font-weight: 400;font-size: 30rpx}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 弹窗层-图片*/
+.modal-mask {width: 100%; height: 100%; position: fixed; top: 0;left: 0;background: #000;opacity: 0.5;}
+.btn{
+  width:80px;
+  height:35px;
+  background:#44b549;
+  line-height:35px;
+  text-align:center;
+  color:#fff;
+  font-size:15px;
+  margin:20px auto;
+  border-radius:100px;
+}
+ 
+/* 遮罩层 */
+.mask{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:#000;
+    z-index:99999;
+    opacity:0.5;
+}
+  
+/* 弹出层 */
+.modalDlg{
+    width:70%;
+    position:fixed;
+    top:30%;
+    left:0;
+    right:0;
+    z-index:99999;
+    margin:0 auto;
+    background-color:#fff;
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+ 
+/* 弹出层里面的图片 */
+.modalDlg image{
+  width:220px;
+  height:120px;
+  margin-top:30px;
+}
+ 
+/* 弹出层里面的按钮 */
+.ok{
+  width:80px;
+  height:35px;
+  background:#44b549;
+  line-height:35px;
+  color:#fff;
+  font-size:15px;
+  margin:20px 15px;
+  border-radius:100px;
+  float: left;
+  text-align: center;
+
+}
+ 
+/* 弹出层里面的文字 */
+.text{
+  text-align:center;
+  font-size:14px;
+  color:#666;
+  width:180px;
+  margin-top:10px;
+}

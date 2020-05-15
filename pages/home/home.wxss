@@ -1,0 +1,63 @@
+page {
+    background-color:#F9F9F9;
+}
+.userinfo-avatar{width:40px;height:40px;margin-left:25px;margin-top: 30px ;float: left}
+.userinfo-avatar image{height: 100%;width: 100%;border-radius: 50px}
+
+.userinfo-nickname{margin-top: 37px;margin-left: 80px;line-height: 21px}
+.userinfo-nickname .u-name{color: white}
+.userinfo-nickname .name{color: white;font-size:12px }
+
+
+.card_roll{ position: relative;  background-color: #FFFFFF;  width: 83%;  margin-left: 3%;  overflow: auto;    border-radius: 5pt;  padding: 5%;  margin-top: 6pt;  z-index: 10000;box-shadow:0 2px 3px -1px rgb(114,114,114) }
+
+.my_card{font-size:35rpx;color: #333333}
+.my_card span{float: right;color: #67BD7C}
+
+.stats{margin:30rpx 20rpx;}
+.stats span{display: block;text-align: center;margin-top: 10rpx;font-size: 30rpx}
+.satas_1,.satas_2,.satas_3{float: left;font-size: 28rpx}
+.satas_1{margin-left: 10%;}
+.satas_2,.satas_3{margin-left: 20%;}
+
+
+.personal_list{ position: relative;  width: 95%; margin: 20rpx auto 0 auto;  overflow: auto;z-index: 10000;height: 120rpx }
+
+
+.personal_list .list{font-size: 30rpx;height: 120rpx;background: white}
+.list_1{width: 90rpx;height: 100%;float: left;align-items: center;display: flex;justify-content: center;padding-left: 20rpx}
+.list_1 image{width: 70rpx;height: 70rpx;}
+.list_2{margin-left: 15px;float: left;height: 120rpx;display:table;vertical-align:middle;}
+
+.list2con{vertical-align:middle;display:table-cell}
+.list_2 .tiele{font-size: 30rpx;}
+
+.list_2 .con{font-size: 24rpx;color: rgb(114,114,114)}
+
+.list_3 {float: right;width:70rpx;height: 120rpx;align-items: center;display: flex;justify-content: center;}
+.list_3 image{height: 50rpx;width: 50rpx}
+
+.remind{width:15rpx;height:15rpx;border-radius: 10px;background: red;float: right;align-items:center;display: flex;justify-items: center;margin-top: 52rpx}
+
+.clear{clear: both;}
+
+.modal-dialog {overflow: hidden; top: 82%;right: 6%; width:207rpx;height: 191rpx; z-index: 99999;float: right}
+.modal-dialog image{display: block;width: 100%;height: 100%}
+
+
+.btn_class{margin:0 0 0 15px;padding: 0;line-height: 1;font-size:32rpx;text-align:left;border:none;display: initial}
+button::after{border: none} 
+
+
+.personal_list_icon{ position: relative;  width: 95%;  margin: 30rpx auto; overflow: auto;  z-index: 10000; }
+.card_roll_icon{ position: relative;  background-color: #FFFFFF;  width: 100%;   overflow: auto;    border-radius: 5pt; z-index: 10000; }
+
+.satas_1_icon image,.satas_2_icon image,.satas_3_icon image,.satas_4_icon image{width: 70rpx;height: 70rpx}
+
+.stats_icon{margin-top:27rpx ;}
+.stats_icon span{display: block;text-align: center;margin-top: 6px;color: rgb(174,174,174)}
+.satas_1_icon,.satas_2_icon,.satas_3_icon,.satas_4_icon{float: left;width: 25%;text-align: center}
+.satas_1_icon{}
+.satas_2_icon,.satas_3_icon{}
+
+

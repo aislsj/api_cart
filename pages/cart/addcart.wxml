@@ -1,0 +1,52 @@
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+
+
+<view class="car_info_con cardrollheight" style="padding-top:{{navH}}rpx">
+
+<view class="title-top" >
+  <block wx:for="{{cart}}">
+    <view class="all_car">
+        <view class="add_car">
+            <view class="car_image">
+                <image src="../../images/cart_info/cart1.png"  class="cartimg"></image>
+            </view>
+            <view class="car_info wrapper">
+              <view class="cell">
+                <view class="license_plate">{{item.carNumber}}</view>
+                <view class="Insurer">被保险人 : {{item.name}}</view>
+              </view>
+            </view>
+            <view class="completion"><span data-id="{{item.carId}}" bindtap="editCart">补全</span></view>
+            <view class="clear"></view>
+        </view>
+    </view>
+  </block>
+
+
+  <view class="all_car" bindtap="btn">
+      <view class="add_car">
+          <image src="../../images/cart_info/add_cart.png" bindtap="btn" class="add_cart_icon"></image>
+      </view>
+  </view>
+
+</view>
+
+</view>
+
+    <!-- 遮罩层 -->
+<view class="mask" catchtouchmove="preventTouchMove" bindtap="hideModal"  wx:if="{{showModal}}"></view>
+    <!-- 弹出层 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+    <!-- 二维码或其他图片 -->
+    <image src="../../images/cart_info/cart_image.jpg"/>
+    <text class="text">请选择车辆类型</text>
+    <view>
+      <view bindtap="personal"  class="ok">个人</view>
+      <view bindtap="enterprise" class="ok">企业</view>
+    </view>
+</view>

@@ -1,0 +1,45 @@
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  text-align: center;
+  width: 650rpx;
+ 
+}
+page{background: white}
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.content { width: 100%;margin: 0 auto;line-height: 26px}
+.content view{font-size:15px;color: #9d9d9d;padding-left: 15% }
+.content text {
+  padding-left: 15% ;
+  display: block;
+  margin-top: 40rpx;
+  border-bottom: 1px dotted rgba(174,174,174,0.3) ;
+  padding-bottom: 15px;
+  margin-bottom:10px 
+} 
+
+.hide{
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+  display: none;
+}
+.show{
+  display: block;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}
+.telephone,.telcode{height: 30px;border-bottom: 1px solid silver;margin-bottom: 5%}
+.telephone text,.telcode text{float: left;width: 20%;}
+
+.telephone_input,.telephone text,.telcode text,.telcode_input{float: left;font-size: 12px;height: 26px;line-height: 26px;}
+
+
+/* //手机号授权按钮 */
+.phone{margin-top:35px;color:white;background: #1AAD19}
+
+.gren{background-color:#1AAD19;}
+.back{background-color:reg(114,114,114);}

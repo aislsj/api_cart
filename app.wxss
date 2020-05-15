@@ -1,0 +1,88 @@
+/**app.wxss**/
+
+/**app.wxss**/
+pages {
+  position: relative;
+  z-index: 9999998;
+  background: #fff;
+}
+
+
+page {
+    width: 100%;
+    height: 100%;
+    background-color: #f43237;
+}
+
+.all {width: 750rpx;flex-direction: column;}
+
+
+.red{background: #f43237;}
+.titleMaxw {text-align: center;margin-top: 20rpx;width: 100%}
+.titleMaxw text {font-size:30rpx;color: #fff;font-weight: 300;}
+.titleMaxw wx-p{font-size: 19px;}
+.titleMaxw p {left: 5%;font-size: 40rpx;color: #fff;font-weight: 300;}
+.allw {display: flex;width: 750rpx;flex-direction: column;}
+
+.title-top{padding-top: 60rpx}
+.title{height: 60rpx}
+.titleMax{z-index: 99999;width: 100%;position: fixed;background: #f43237}
+.titleMax p{width: 50rpx;height: 50rpx;}
+.titleMax p image{width: 100%;height:100%;}
+.titleMax text {font-size:36rpx;color: #fff;font-weight: 300;}
+
+
+
+.custom text {color: #fff;font-size: 34rpx;font-weight: 500;max-width: 280rpx;}
+.maxheight{height: 100%}
+.titleMax {text-align: center;}
+
+
+.titleMax wx-p{
+ font-size: 19px;
+}
+.titleMax p {
+    left: 5%;
+    font-size: 40rpx;
+    color: #fff;
+    font-weight: 300;
+    position: fixed
+}
+
+.container {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 200rpx 0; */
+    box-sizing: border-box;
+}
+
+.custom {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 45px;
+    /* background: #2C5CFF; */
+    z-index: 999;
+}
+
+
+.empty_custom {
+    height: 45px;
+    width: 100%;
+}
+.clear{clear: both}
+
+
+
+/* 登录样式 */
+.login{background: white;height: 100%}
+.login_header {margin: 90rpx 0 90rpx 50rpx;border-bottom: 1px solid #ccc;text-align: center;width: 650rpx;height: 300rpx;line-height: 450rpx;}
+.login_header image {width: 200rpx;height: 200rpx}
+.login_content {margin-left: 50rpx;margin-bottom: 90rpx}
+.login_content text {display: block;color: #9d9d9d;margin-top: 40rpx;} 
+.login_hide{border-radius: 80rpx;margin: 70rpx 50rpx;font-size: 35rpx;display: none;}
+.login_show{display: block;border-radius: 80rpx;margin: 70rpx 50rpx;font-size: 35rpx;}

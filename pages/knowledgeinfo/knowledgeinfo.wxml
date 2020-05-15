@@ -1,0 +1,23 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+<view class="all" style='padding-top: {{height}}px'>
+
+</view>
+
+
+
+<view class='container'>
+  <image class='head-imagee' src='{{url}}{{News.img}}'></image>
+  <view class='author-date'>
+    <image class='avatar' src='../../images/new/user.png'></image>
+    <text class='author'>金鑫达</text>
+    <text class='const-text'>发表于</text>
+    <text class='date'>{{time}}</text>
+  </view>
+  <text class='title'>{{News.name}}</text>
+  
+  <text class='detail'>
+ {{News.content}}
+  </text>
+</view>

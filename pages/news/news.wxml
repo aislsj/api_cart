@@ -1,0 +1,93 @@
+
+<wxs src="../../utils/filter.wxs" module="filters"/>
+
+
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+
+<view class="all cardrollheight" style="padding-top:{{navH}}rpx">
+
+
+<view class="title-top">
+  <view class="con_all ">
+      <view class="new">
+          <view style="margin-top:30rpx"></view>
+          <view class="user">
+          <view><image src="../../images/new/user.png"></image></view>
+            <span>金鑫达</span>
+          </view>
+          <view class="new_con">
+          <!-- 如果有任何意见或建议,请添加微信号AL8888131488与我们联系,或者直接使用“电话咨询”的联系方式告诉我们。  -->
+          如果你有任何意见或建议，请通过下发留言方式与我们留言，我们收到消息的第一时间会与你联系。
+          </view>
+          <view class="clear"></view>
+      </view>
+  </view>
+
+  <view class="con_all">
+    <block wx:for="{{news}}">
+      <view class="new">
+            <view class="new_time">
+              <image src="../../images/new/time.png"></image>
+              {{filters.formatDate(item.time)}}
+            </view>
+
+          <view class="user" wx:if="{{item.type==1}}">
+            <view>
+              <image src="../../images/new/user.png"></image>
+            </view>
+              <span>金鑫达</span>
+          </view>
+
+          <view class="user"  wx:if="{{item.type==0}}">
+            <view class="user-image">
+              <image src="{{userInfo.avatarUrl}}"></image>
+            </view>
+              <span>{{userInfo.nickName}}</span>
+          </view>
+
+            <view class="new_con">
+            {{item.content}}
+            </view>
+          <view class="clear"></view>
+      </view>
+    </block> 
+  </view>
+
+  <view class="bottom"></view>
+</view>
+
+
+
+
+
+
+<!-- <view class="consultation"> -->
+  <!-- <view class="consultation_phone" bindtap='buttonTap'>微信咨询</view>  -->
+  <!-- <view class="consultation_wx" catchtap='freeTell'>电话咨询</view> -->
+<!-- </view> -->
+
+
+<!-- <view class='container'>
+  <modal title="咨询我们" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+  <view class="text">{{news_con}}</view>
+  </modal>
+</view> -->
+
+<form bindsubmit="submitForm" report-submit="true">
+  <view class="release">
+    <view class="replyinfo2">
+      <textarea placeholder-class="input_null" fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" placeholder="请输入留言" name="comment" value="{{message}}"></textarea>
+      <button form-type="submit" class="submit">发送</button>
+    </view>
+  </view>
+</form>
+
+
+
+
+</view>

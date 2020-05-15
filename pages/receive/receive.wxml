@@ -1,0 +1,21 @@
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+
+  <view class="codeall cardrollheight" style="padding-top:{{navH}}rpx">
+    <view class="ordle_title title-top" >感恩有您携手同行</view>
+    <view class="code-image">
+        <view class="cardtitle">{{card_roll.name}}</view>
+        <view class="cardcon">你的朋友送给你一张{{card_roll.name}}，是否领取</view>
+        <view class='cardimage'><image src="{{url}}{{card_roll.img}}"></image></view>
+
+        <view class="choice" style="margin-top:5%">
+            <view class="cancel" bindtap="goBack">取消</view>
+            <view class="confirm" data-id="{{lotteryHistoryId}}" bindtap="ok" >点击领取</view>
+            <view class="clear" ></view>
+        </view>
+    </view>
+    
+  </view>

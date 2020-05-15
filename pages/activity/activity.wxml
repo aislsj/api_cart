@@ -1,0 +1,20 @@
+<wxs src="../../utils/filter.wxs" module="filters"/>
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}rpx'></view>
+
+
+<view class="all cardrollheight"  style="padding-top:{{navH}}rpx">
+  <view class="exchange_info title-top">
+      <view class="title">
+        活动内容
+      </view>
+  </view>
+  <view class="product_image">
+      <view class="integralInfo_img" >
+        <image src="{{img}}" mode="widthFix"></image>
+      </view>
+  </view>
+</view>
+

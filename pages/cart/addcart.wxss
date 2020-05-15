@@ -1,0 +1,123 @@
+page{background: #EEEDED}
+
+.car_info_con{width: 100%;background: #EEEDED;}
+.titleMax{background: #F15233}
+.all_car{width: 90%;background:white;margin: 5% auto;height:160rpx; }
+
+.car_image{width: 20%;float: left;text-align: center;height: 160rpx;line-height:160rpx;padding-left: 5%;align-items: center;display: flex;justify-content: center; }
+.car_image .cartimg{width: 115rpx;height: 112rpx;}
+.car_info{width: 45%;float: left;height: 160rpx;line-height: 42rpx;margin-top: 20rpx}
+.car_info .Insurer{font-size: 24rpx;color:#999999 }
+.completion{width: 30%;float: left;height: 160rpx;line-height: 160rpx}
+.completion span{padding:15rpx 35rpx;background: #F15233;color: white;border-radius: 25px;font-size: 24rpx}
+
+.wrapper {display:table;width:45%x;height:160rpx;margin:0 auto;}
+
+
+.cell{display:table-cell; vertical-align:middle;}
+
+
+.type_1{width: 43%;float: left;text-align: right;height: 160rpx;line-height:160rpx}
+.type_1 image{width: 40rpx;height: 40rpx}
+.type_2{width: 15%;float: left;height: 160rpx;line-height: 160rpx;font-size: 12px;color: #F15233;text-align: center}
+.type_3{width: 20%;float: left;height: 160rpx;line-height: 160rpx}
+.type_3 image{width: 30rpx;height: 30rpx}
+
+.add_car{height: 160rpx;text-align: center;line-height:160rpx}
+
+
+.all_car .cart{width:90px;height: 60px;}
+
+
+.add_cart_icon{width:189rpx;height: 40rpx;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 弹窗层-图片*/
+.modal-mask {width: 100%; height: 100%; position: fixed; top: 0;left: 0;background: #000;opacity: 0.5;}
+.btn{
+  width:80px;
+  height:35px;
+  background:#44b549;
+  line-height:35px;
+  text-align:center;
+  color:#fff;
+  font-size:15px;
+  margin:20px auto;
+  border-radius:100px;
+}
+ 
+/* 遮罩层 */
+.mask{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:#000;
+    z-index:9000;
+    opacity:0.5;
+}
+  
+/* 弹出层 */
+.modalDlg{
+    width:70%;
+    position:fixed;
+    top:100px;
+    left:0;
+    right:0;
+    z-index:9999;
+    margin:0 auto;
+    background-color:#fff;
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+ 
+/* 弹出层里面的图片 */
+.modalDlg image{
+  width:220px;
+  height:120px;
+  margin-top:30px;
+}
+ 
+/* 弹出层里面的按钮 */
+.ok{
+  width:80px;
+  height:35px;
+  background:#44b549;
+  line-height:35px;
+  color:#fff;
+  font-size:15px;
+  margin:20px 15px;
+  border-radius:100px;
+  float: left;
+  text-align: center;
+
+}
+ 
+/* 弹出层里面的文字 */
+.text{
+  text-align:center;
+  font-size:14px;
+  color:#666;
+  width:180px;
+  margin-top:10px;
+}

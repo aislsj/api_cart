@@ -1,0 +1,102 @@
+
+<!--index.wxml-->
+
+
+
+
+
+<view class="all" style="width:100%;min-height:100%;background-image:url('https://www.jxdqx.com/file/1586742156030.o6zAJs1AYvnAJjOmpOqDkCmUadFY');background-size:100% 100%;padding-top:0 ">
+
+<view style="width:100%;height:{{navH}}px"></view>
+<view class="titleMaxw">
+  <text>抽券活动</text>
+</view>
+
+<view class="titles">
+  <p>感恩有您抽券活动</p>
+</view>
+<view class="titleFont">
+    <P>最高100元现金抵用卷</P>
+  </view>
+  <view class="luckyBox" style="width:600rpx;min-height:730prx;background-image:url('https://www.jxdqx.com/file/1586742241700.o6zAJs1AYvnAJjOmpOqDkCmUadFY');background-size:100% 100%;">
+  <!-- 抽奖 -->
+<p >你还有<span>{{number}}</span>次抽奖机会</p>
+
+
+
+
+<view class='frame_view'>
+    <view class='frame_row'>
+      <image class='frame_item' style='opacity:{{color[0]}}' src='{{image0}}'></image>
+      <image class='frame_item' style='opacity:{{color[1]}}' src='{{image1}}'></image>
+      <image class='frame_item' style='opacity:{{color[2]}}' src='{{image2}}'></image>
+    </view>
+    <view class='frame_row'>
+      <image class='frame_item' style='opacity:{{color[7]}}' src='{{image7}}'></image>
+      <image class='frame_item' src='{{btnconfirm}}' bindtap='{{myclick}}'></image>
+      <image class='frame_item' style='opacity:{{color[3]}}' src='{{image3}}'></image>
+    </view>
+    <view class='frame_row'>
+      <image class='frame_item' style='opacity:{{color[6]}}' src='{{image6}}'></image>
+      <image class='frame_item' style='opacity:{{color[5]}}' src='{{image5}}'></image>
+      <image class='frame_item' style='opacity:{{color[4]}}' src='{{image4}}'></image>
+    </view>
+</view>
+
+</view>
+<view class="home" bindtap="goHome">
+    <P>个人中心</P>
+  </view>
+  </view>
+ <view class="giftBox" bindtap="card_roll" style="background-image:url('https://www.jxdqx.com/file/1587451371855.o6zAJs1AYvnAJjOmpOqDkCmUadFY');background-size:100% 100%;"></view>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="modal-mask" bindtap="hidenoModal"  wx:if="{{prizeModal}}"></view>
+<view class="modal-dialog" wx:if="{{prizeModal}}">
+  <view>
+    <image class='view-image-1' src="../../images/winning_the_prize-1.png"></image>
+    <image class='view-image-2' src="../../images/error_the_prize-2.png"></image>
+    <view  class='view-image-3' style="background-image:url('https://www.jxdqx.com/file/1586742298615.o6zAJs1AYvnAJjOmpOqDkCmUadFY');background-size:100% 100%;">
+        请再接再厉!
+    </view>
+    <view class="view-image-text" style="background-image:url('https://www.jxdqx.com/file/1586742337001.o6zAJs1AYvnAJjOmpOqDkCmUadFY');background-size:100% 100%;">
+        <button class="for_friends" bindtap="card_roll">我的卡卷</button><view style="width:50rpx"></view>
+        <button class="show" bindtap='clickLuck_two'>再抽一次</button>
+    </view>
+  </view>
+</view> 
+
+
+
+
+
+<view class="modal-mask" bindtap="hideModal"  wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}" >
+  <view>
+    <image class='view-image-1' src="../../images/winning_the_prize-1.png"></image>
+    <image class='view-image-2' src="../../images/winning_the_prize-2.png"></image>
+    <view  class='view-image-3' style="background-image:url('https://www.jxdqx.com/file/1586742298615.o6zAJs1AYvnAJjOmpOqDkCmUadFY');background-size:100% 100%;">
+        {{Prizename}}
+    </view>
+    <view class="view-image-text" style="background-image:url('https://www.jxdqx.com/file/1586742337001.o6zAJs1AYvnAJjOmpOqDkCmUadFY');background-size:100% 100%;">
+        <button class="for_friends"  wx:if="{{sendnum >  0}}" type="primary" open-type="share" data-name="pageShare" id="{{lotteryHistoryId}}" >送给朋友</button>
+        <button class="for_friends"  wx:if="{{sendnum == 0}}" type="button"  bindtap="sendnonum">送给朋友</button><view style="width:50rpx"></view>
+        <button class="show"   type="button"  data-id="{{lotteryHistoryId}}" bindtap="showcardroll">立即查看</button>
+    </view>
+  </view>
+</view>
+

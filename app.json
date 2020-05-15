@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/auth/auth",
+    "pages/integral/integral",
+    "pages/volume/volume",
+    "pages/cardroll/cardroll",
+    "pages/goods/goods",
+    "pages/cartinfo/cartinfo",
+    "pages/cart/addcart",
+    "pages/news/news",
+    "pages/orcode/orcode",
+    "pages/login/login",
+    "pages/receive/receive",
+    "pages/eliminate/eliminate",
+    "pages/goodsinfo/goodsinfo",
+    "pages/goodsroll/goodsroll",
+    "pages/volumegoods/volumegoods",
+    "pages/activity/activity",
+    "components/navbar/index",
+    "pages/knowledge/knowledge",
+    "pages/knowledgeinfo/knowledgeinfo"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f43237",
+    "navigationBarTitleText": "wechat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "images/icon/icon_people.png",
+        "selectedIconPath": "images/icon/icon_people2.png"
+      },
+      {
+        "pagePath": "pages/goods/goods",
+        "text": "商城",
+        "iconPath": "images/icon/icon_shop.png",
+        "selectedIconPath": "images/icon/icon_shop2.png"
+      },
+      {
+        "pagePath": "pages/cart/addcart",
+        "text": "车辆",
+        "iconPath": "images/icon/icon_cart.png",
+        "selectedIconPath": "images/icon/icon_cart2.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "个人",
+        "iconPath": "images/icon/icon_man.png",
+        "selectedIconPath": "images/icon/icon_man2.png"
+      }
+    ],
+    "borderStyle": "black",
+    "selectedColor": "#f61616",
+    "color": "#0c0b0b"
+  },
+  "sitemapLocation": "sitemap.json"
+}

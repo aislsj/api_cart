@@ -1,0 +1,141 @@
+<wxs src="../../utils/filter.wxs" module="filters"/>
+
+
+
+
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='home-page' style='padding-top: {{height}}px'>
+      <view class="all cardrollheight" >
+      <view class="basic-info-box title-tops" >
+            <view class="tabs-box" >
+              <block wx:for="{{['未使用','已使用','已过期']}}">
+                <view class="tabs-item {{currentTabsIndex==index?'selected':''}}" bindtap="onTabsItemTap" data-index="{{index}}">
+                  <view class="vlue"><span>{{item}}</span></view>
+                </view>
+              </block>
+              <view style="clear:both"></view>
+            </view>
+          </view>
+
+
+        <view class="product-detail-box" style="padding-top:90rpx">
+          <view hidden="{{currentTabsIndex!=0}}" class="product-info-image">
+            <view hidden="{{ybm[0].count==0}}">
+              <block wx:for="{{ybm[0].list}}">
+                <view class="integralInfo"  >
+                    <view class="integralInfo_img" data-id="{{item.id}}" bindtap="onShowMore">
+                      <view class="card_img">
+                        <image src="{{url}}{{item.lotteryConfig.cardImg}}"></image>
+                      </view>
+                    </view>
+
+                    <view class="card-right" >
+                      <view class="integralInfo_txt" data-id="{{item.id}}" bindtap="onShowMore">
+                      <view class="">{{item.lotteryConfig.name}}</view>
+                          <view  wx:if="{{item.lotteryConfig.overdue==true}}" class="end_time" >
+                          {{filters.formatDate(item.overdueTime)}}过期
+                          </view>
+                          <view  wx:if="{{item.lotteryConfig.overdue==flase}}" class="end_time">
+                            永不过期
+                          </view>
+                        <view>{{item.lotteryConfig.instructions}}</view>
+                      </view>
+                      <view class="clear"></view>
+                      <view class="show_more" data-id="{{item.id}}" bindtap="orCode">
+                        <image src="../../images/icon/show_more.png"></image>
+                      </view>
+                    </view>
+                </view>
+              </block>
+            </view>
+
+          </view>
+
+          <view hidden="{{currentTabsIndex!=1}}" class="product_parameter">
+              <view hidden="{{ybm[1].count==0}}">
+                <block wx:for="{{ybm[1].list}}">
+                  <view class="integralInfo" data-id="{{item.id}}" bindtap="onShowMore">
+                      <view class="integralInfo_img">
+                          <view class="card_img">
+                              <image src="{{url}}{{item.lotteryConfig.cardImg}}"></image>
+                          </view>
+                      </view>
+                      <view class="card-right" >
+                      <view class="integralInfo_txt">
+                        <view class="">{{item.lotteryConfig.name}}</view>
+                          <view  wx:if="{{item.lotteryConfig.overdue==true}}" class="end_time" >
+                          {{filters.formatDate(item.overdueTime)}}过期
+                          </view>
+                          <view  wx:if="{{item.lotteryConfig.overdue==flase}}" class="end_time">
+                            永不过期
+                          </view>
+                        <view>{{item.lotteryConfig.instructions}}</view>
+                      </view>
+                      <view class="clear"></view>
+                      <view class="show_more" >
+                          <image src="../../images/icon/used.png"></image>
+                        </view>
+                      </view>
+                  </view>
+              </block>
+          </view>
+
+        </view>
+        <view hidden="{{currentTabsIndex!=2}}" class="product_parameter">
+            <view hidden="{{ybm[2].count==0}}">
+              <block wx:for="{{ybm[2].list}}">
+                    <view class="integralInfo" data-id="{{item.id}}" bindtap="onShowMore">
+                      <view class="integralInfo_img">
+                        <view class="card_img">
+                            <image src="{{url}}{{item.lotteryConfig.cardImg}}"></image>
+                        </view>
+                      </view>
+
+
+                      <view class="card-right" >
+                      <view class="integralInfo_txt">
+                          <view class="">{{item.lotteryConfig.name}}</view>
+                          <view  wx:if="{{item.lotteryConfig.overdue==true}}" class="end_time" >
+                          {{filters.formatDate(item.overdueTime)}}过期
+                          </view>
+                          <view>{{item.lotteryConfig.instructions}}</view>
+                      </view>
+                      <view class="clear"></view>
+                        <view class="show_more" >
+                          <image src="../../images/icon/expired.png"></image>
+                      </view>
+                      </view>
+                    </view>
+              </block>
+            </view>
+        </view>
+        <view style="clear:both"></view>
+        </view>
+        <view style="clear:both"></view>
+
+
+      </view>
+</view>
+
+
+ 
+
+
+
+  
+<!-- 遮罩层 车辆选择 -->
+<view class="mask" catchtouchmove="preventTouchMove" bindtap="hideModal"  wx:if="{{showModal}}"></view>
+<!-- 弹出层 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+<!-- 二维码或其他图片 -->
+    <image src="{{orCodeImage}}" />
+    <picker bindchange="bindcarChange" range="{{group_array}}" value='{{group_array[group_index].insuranceId}}' range-key="{{'carNumber'}}" >
+    <input hidden="true" name="businessBrand" value='{{teamid}}' /> 
+    <input class='selectInp text' placeholder-class='{{place}}' placeholder='请选择车辆'  disabled='false' value='{{teamname}}'/> 
+    </picker>
+    <!-- <text class="text">请选择车辆</text> -->
+    <view>
+      <view bindtap="personal" data-lot="{{lotteryHistoryId}}" data-car="{{carId}}"  class="ok">确定</view>
+    </view>
+</view>
